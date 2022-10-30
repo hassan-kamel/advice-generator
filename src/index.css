@@ -1,13 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Manrope', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1f2632;
+  color: #cee3e9;
+
+  overflow-x: hidden;
+}
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  max-width: 500px;
+  width: 80%;
+  text-align: center;
+  background-color: #323a49;
+  padding: 40px;
+  border-radius: 10px;
+  position: relative;
+}
+.app span {
+  color: #52ffa8;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.app p {
+  font-size: 28px;
+  line-height: 1.5;
+}
+.app sup {
+  /* font-size: 30px; */
+}
+.app .divider {
+  margin-block: 20px;
+  text-align: center;
+}
+.app .dice {
+  border: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: #52ffa8;
+  padding: 20px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+.app .dice:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 50px #52ffa8;
+}
+.app .dice:active {
+  box-shadow: 1px 1px 5px #52ffa8;
+}
+
+@media (max-width: 680px) {
+  .app {
+    max-width: 350px;
+    padding: 20px;
+  }
+  .app p {
+    font-size: 20px;
+  }
+  .app .divider {
+    margin-block: 40px;
+  }
 }
